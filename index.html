@@ -748,6 +748,7 @@
     var headers = { 'Content-Type': 'text/plain;charset=UTF-8' };
 
     function done() {
+      try { ym(112577477, 'reachGoal', 'lead', { request_type: intent }); } catch (e) {}
       document.getElementById('form-body').style.display = 'none';
       document.getElementById('form-success').style.display = 'block';
     }
