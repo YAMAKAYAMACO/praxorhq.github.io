@@ -309,6 +309,42 @@ for p in pages:
     out.write_text(render(p), encoding="utf-8")
     print("собрал", out.relative_to(ROOT))
 
+def render_404():
+    return f"""<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Страница не найдена — Праксор</title>
+<meta name="robots" content="noindex" />
+{HEAD_COMMON}
+{LANDING_STYLE}
+{ARTICLE_CSS}
+</head>
+<body>
+<div style="font-family: 'Geist', -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif; background: #FBFAF8; color: #0E1116; min-height: 100vh; overflow-x: hidden;">
+{nav()}
+
+  <main>
+  <div class="a-wrap">
+    <h1 class="a-h1">Такой страницы нет</h1>
+    <p class="a-lead">Возможно, в адресе опечатка или страницу перенесли. Начните с <a href="/">главной</a> или выберите материал ниже.</p>
+    <article class="a-body" style="max-width: 70ch; margin-top: 48px;">
+{catalog()}
+    </article>
+  </div>
+  </main>
+
+  {FOOTER}
+</div>
+</body>
+</html>
+"""
+
+
+(ROOT / "404.html").write_text(render_404().replace('href="#request"', 'href="/#request"'), encoding="utf-8")
+print("собрал 404.html")
+
 # sitemap: главная + все статьи
 urls = [(f"{SITE}/", "2026-11-12")] + [(f"{SITE}/{p['slug']}/", p.get("modified", p["published"])) for p in pages]
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
