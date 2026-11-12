@@ -261,6 +261,10 @@ def render(p):
 <meta property="og:url" content="{url}" />
 <meta property="og:site_name" content="Праксор" />
 <meta property="og:locale" content="ru_RU" />
+<meta property="og:image" content="{SITE}/og/{p['slug']}.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
 <script type="application/ld+json">
 {ld(p)}
 </script>
