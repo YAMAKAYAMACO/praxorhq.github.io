@@ -199,6 +199,8 @@
   .a-next a:hover { color: #1B4DE4; }
   .a-next span { display: block; font-size: 15px; color: #5B646E; letter-spacing: 0; margin-top: 4px; }
   .a-faq h3 { margin-top: 28px; }
+  .a-body h2#all + .a-next { margin-top: 28px; }
+  .a-body h2#all ~ .a-next { margin-top: 40px; }
   @media (max-width: 1000px) {
     .a-wrap { padding-left: 20px; padding-right: 20px; }
     .a-h1 { font-size: 38px; letter-spacing: -1.2px; }
@@ -269,7 +271,7 @@
 
 <h2 id="who">Какие агенты читают AGENTS.md</h2>
 <p>Файл поддерживают OpenAI Codex, Cursor, GitHub Copilot coding agent, Google Jules и Gemini CLI, Amp, Factory, Aider, Zed, Warp и другие инструменты. Полный список ведётся на agents.md.</p>
-<p>Claude Code читает свой файл CLAUDE.md. Чтобы не вести два файла, в CLAUDE.md ставят одну строку с импортом:</p>
+<p>Claude Code читает свой файл <a href="/claude-md/">CLAUDE.md</a>. Чтобы не вести два файла, в CLAUDE.md ставят одну строку с импортом:</p>
 <pre><code>@AGENTS.md</code></pre>
 <p>Claude Code подставит содержимое AGENTS.md в контекст. Ниже можно добавить правила, которые нужны только Claude Code. Второй способ — символическая ссылка CLAUDE.md на AGENTS.md.</p>
 
@@ -445,6 +447,8 @@
             <div><a href="/harness-engineering/">Harness engineering</a></div>
             <div><a href="/spec-driven-development/">Spec-driven development</a></div>
             <div><a href="/agents-md/">AGENTS.md</a></div>
+            <div><a href="/dora-metrics/">DORA-метрики</a></div>
+            <div><a href="/ai-sdlc/#all">Все материалы</a></div>
           </div>
         </div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em;">

@@ -199,6 +199,8 @@
   .a-next a:hover { color: #1B4DE4; }
   .a-next span { display: block; font-size: 15px; color: #5B646E; letter-spacing: 0; margin-top: 4px; }
   .a-faq h3 { margin-top: 28px; }
+  .a-body h2#all + .a-next { margin-top: 28px; }
+  .a-body h2#all ~ .a-next { margin-top: 40px; }
   @media (max-width: 1000px) {
     .a-wrap { padding-left: 20px; padding-right: 20px; }
     .a-h1 { font-size: 38px; letter-spacing: -1.2px; }
@@ -292,7 +294,7 @@
 <ul>
   <li><strong>Контекст.</strong> Зачем задача, кто пользователь, какую проблему решаем.</li>
   <li><strong>Требования.</strong> Что система должна делать, нумерованным списком.</li>
-  <li><strong>Acceptance criteria.</strong> Конкретные проверки в формате «дано, когда, тогда». Каждый критерий связан с тестом.</li>
+  <li><strong>Acceptance criteria.</strong> Конкретные проверки в формате «дано, когда, тогда». Каждый критерий связан с тестом. Как агенту писать такие тесты — в статье про <a href="/ai-test-generation/">генерацию тестов</a>.</li>
   <li><strong>Вне задачи.</strong> Что в этой задаче не делаем, чтобы агент не расширял объём.</li>
   <li><strong>Ограничения.</strong> Производительность, безопасность, совместимость, какие модули трогать нельзя.</li>
   <li><strong>Открытые вопросы.</strong> Агент дописывает их на шаге clarify, человек отвечает.</li>
@@ -456,6 +458,8 @@
             <div><a href="/harness-engineering/">Harness engineering</a></div>
             <div><a href="/spec-driven-development/">Spec-driven development</a></div>
             <div><a href="/agents-md/">AGENTS.md</a></div>
+            <div><a href="/dora-metrics/">DORA-метрики</a></div>
+            <div><a href="/ai-sdlc/#all">Все материалы</a></div>
           </div>
         </div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em;">

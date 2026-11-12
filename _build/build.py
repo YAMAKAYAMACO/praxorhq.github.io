@@ -127,6 +127,8 @@ ARTICLE_CSS = """
   .a-next a:hover { color: #1B4DE4; }
   .a-next span { display: block; font-size: 15px; color: #5B646E; letter-spacing: 0; margin-top: 4px; }
   .a-faq h3 { margin-top: 28px; }
+  .a-body h2#all + .a-next { margin-top: 28px; }
+  .a-body h2#all ~ .a-next { margin-top: 40px; }
   @media (max-width: 1000px) {
     .a-wrap { padding-left: 20px; padding-right: 20px; }
     .a-h1 { font-size: 38px; letter-spacing: -1.2px; }
@@ -147,6 +149,13 @@ ARTICLE_CSS = """
 </style>""".replace("MONO", MONO)
 
 
+def body_of(p):
+    if p["slug"] == "ai-sdlc":
+        # каталог встаёт перед блоком вопросов
+        return p["body"].replace('<h2 id="faq">', catalog() + '\n\n<h2 id="faq">', 1)
+    return p["body"]
+
+
 def toc(body):
     items = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', body)
     links = "\n".join(f'      <a href="#{i}">{re.sub("<[^>]+>", "", t)}</a>' for i, t in items)
@@ -161,6 +170,25 @@ def related(p):
     if not links:
         return ""
     return '<div class="a-next"><div class="a-next-t">Читать дальше</div>' + "".join(links) + "</div>"
+
+
+# Каталог материалов на странице-хабе /ai-sdlc/
+CATALOG = [
+    ("Подход", ["harness-engineering", "spec-driven-development", "agentic-development",
+                "context-engineering", "multi-agent-development"]),
+    ("Практики", ["agents-md", "claude-md", "ai-code-review", "ai-test-generation", "llm-gateway"]),
+    ("Метрики", ["dora-metrics", "ai-impact-metrics"]),
+]
+
+
+def catalog():
+    groups = []
+    for title, slugs in CATALOG:
+        links = "".join(
+            f'<a href="/{s}/">{esc(by_slug[s]["h1"])}<span>{esc(by_slug[s]["description"])}</span></a>'
+            for s in slugs if s in by_slug)
+        groups.append(f'<div class="a-next"><div class="a-next-t">{title}</div>{links}</div>')
+    return '<h2 id="all">Все материалы</h2>\n' + "\n".join(groups)
 
 
 def ld(p):
@@ -251,10 +279,10 @@ def render(p):
     <p class="a-lead">{p["lead"]}</p>
     <div class="a-meta">Праксор · обновлено {ru_date(upd)} · {p["read"]} мин чтения</div>
     <div class="a-grid">
-    {toc(p["body"])}
+    {toc(body_of(p))}
     <article class="a-body">
-{p["body"]}
-{related(p)}
+{body_of(p)}
+{"" if p["slug"] == "ai-sdlc" else related(p)}
     </article>
     </div>
   </div>

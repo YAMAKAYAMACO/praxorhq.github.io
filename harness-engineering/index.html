@@ -199,6 +199,8 @@
   .a-next a:hover { color: #1B4DE4; }
   .a-next span { display: block; font-size: 15px; color: #5B646E; letter-spacing: 0; margin-top: 4px; }
   .a-faq h3 { margin-top: 28px; }
+  .a-body h2#all + .a-next { margin-top: 28px; }
+  .a-body h2#all ~ .a-next { margin-top: 40px; }
   @media (max-width: 1000px) {
     .a-wrap { padding-left: 20px; padding-right: 20px; }
     .a-h1 { font-size: 38px; letter-spacing: -1.2px; }
@@ -283,7 +285,7 @@
   <tr><td>Context engineering</td><td>Что агент должен увидеть, чтобы решить задачу</td><td>В подборе файлов, документации и инструментов на одну сессию</td></tr>
   <tr><td>Harness engineering</td><td>Что система должна запретить, проверить и исправить</td><td>В репозитории: правила, спеки, тесты, CI, ревью-агенты</td></tr>
 </table></div>
-<p>Context engineering входит в harness как один из слоёв. Хороший контекст повышает шанс, что агент сделает задачу правильно с первого раза. Harness отвечает за случаи, когда агент ошибся: ошибку должна поймать проверка, а исправление должно попасть в правила.</p>
+<p><a href="/context-engineering/">Context engineering</a> входит в harness как один из слоёв. Хороший контекст повышает шанс, что агент сделает задачу правильно с первого раза. Harness отвечает за случаи, когда агент ошибся: ошибку должна поймать проверка, а исправление должно попасть в правила.</p>
 
 <h2 id="layers">Из чего состоит harness</h2>
 <p>В проектах Праксора harness складывается из четырёх слоёв над кодовой базой. Каждый слой версионируется в git рядом с кодом.</p>
@@ -298,7 +300,7 @@
 <p>Требования к задаче с acceptance criteria, привязанными к тестам. Спека нужна, чтобы агент не додумывал требования молча. Подробнее о подходе — в статье про <a href="/spec-driven-development/">spec-driven development</a>.</p>
 
 <h3>Quality gates</h3>
-<p>Проверки, через которые проходит каждое изменение: тесты, линтеры, типы, архитектурные правила, ревью другим агентом. Типовые задачи проходят цикл автоматически. На изменениях с высокой ценой ошибки стоит ревью человека.</p>
+<p>Проверки, через которые проходит каждое изменение: тесты, линтеры, типы, архитектурные правила, ревью другим агентом. Типовые задачи проходят цикл автоматически. На изменениях с высокой ценой ошибки стоит ревью человека. Как настроить ревью агентами — в статье <a href="/ai-code-review/">AI code review</a>.</p>
 
 <div class="a-note">Ворота должны быть исполняемыми. Правило «не ходить из UI-слоя в базу напрямую» в документе агент нарушит рано или поздно. То же правило в виде линтера или архитектурного теста остановит изменение в CI.</div>
 
@@ -442,6 +444,8 @@
             <div><a href="/harness-engineering/">Harness engineering</a></div>
             <div><a href="/spec-driven-development/">Spec-driven development</a></div>
             <div><a href="/agents-md/">AGENTS.md</a></div>
+            <div><a href="/dora-metrics/">DORA-метрики</a></div>
+            <div><a href="/ai-sdlc/#all">Все материалы</a></div>
           </div>
         </div>
         <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em;">
