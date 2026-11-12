@@ -256,7 +256,7 @@
     <nav class="a-crumbs" aria-label="Хлебные крошки"><a href="/">Праксор</a> / <a href="/ai-sdlc/">AI SDLC</a> / <span>LLM-шлюз</span></nav>
     <h1 class="a-h1">LLM-шлюз и on-premise модели: закрытый контур для AI-агентов</h1>
     <p class="a-lead">LLM-шлюз — прокси между агентами разработчиков и провайдерами моделей. Все запросы идут через одну точку: шлюз хранит ключи, логирует вызовы, считает токены по командам и маршрутизирует задачи между облачными и локальными моделями. Для компаний с требованиями ИБ это обычно первое условие, без которого агентов не пускают к коду.</p>
-    <div class="a-meta">Праксор · обновлено 12 ноября 2026 · 10 мин чтения</div>
+    <div class="a-meta">Обновлено 12 ноября 2026, 10 мин чтения</div>
     <div class="a-grid">
     <nav class="a-toc" aria-label="Содержание">
       <div class="a-toc-t">Содержание</div>
@@ -311,7 +311,7 @@ Cursor, агенты в CI
   <tr><td>Envoy AI Gateway</td><td>Открытый код на базе Envoy</td><td>Kubernetes</td></tr>
   <tr><td>Облачные шлюзы</td><td>Сервис облачного провайдера</td><td>В облаке провайдера</td></tr>
 </table></div>
-<p>Для закрытого контура выбирают решения, которые разворачиваются внутри периметра компании. Ключевые критерии: поддержка нужных форматов API, виртуальные ключи, бюджеты, экспорт логов в вашу систему и работа без доступа в интернет для локальных моделей.</p>
+<p>Для закрытого контура выбирают решения, которые разворачиваются внутри периметра компании. На что смотреть: поддержка нужных форматов API, виртуальные ключи, бюджеты, экспорт логов в вашу систему и работа без доступа в интернет для локальных моделей.</p>
 
 <h2 id="connect">Как подключить агентов к шлюзу</h2>
 <p>Большинство агентов умеют работать через собственный адрес API. Claude Code, например, поддерживает шлюзы, которые отдают формат Anthropic Messages. В <a href="https://code.claude.com/docs/en/llm-gateway" rel="noopener" target="_blank">документации Claude Code</a> описано подключение через LiteLLM. Настройка — две переменные окружения:</p>
@@ -362,7 +362,7 @@ budgets:
 
 <div class="a-prx">
   <h3>Закрытый контур в проектах Праксора</h3>
-  <p>На диагностике разбираем требования ИБ и текущие доступы к моделям. Проектируем шлюз, маршрутизацию и on-premise модель под задачи, которые нельзя отдавать наружу. Агенты строим vendor-agnostic: смена модели не требует переделки их кода. <a href="/#cases">Кейс 01</a></p>
+  <p>На диагностике разбираем требования ИБ и текущие доступы к моделям. Проектируем шлюз, маршрутизацию и on-premise модель под задачи, которые нельзя отдавать наружу. Агентов строим без привязки к вендору: при смене модели их код не переделывают. <a href="/#cases">Кейс крупной корпорации</a></p>
 </div>
 
 <h2 id="faq">Вопросы</h2>
@@ -387,8 +387,7 @@ budgets:
     <div class="v2-pad v2-sec" style="max-width: 1280px; margin: 0 auto; padding: 128px 40px;">
       <div class="v2-split" style="display: grid; grid-template-columns: 6fr 6fr; gap: 72px; align-items: start;">
         <div>
-          <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C;">Первый шаг</div>
-          <h2 class="v2-h2" style="font-size: 44px; font-weight: 400; line-height: 1.08; letter-spacing: -1.4px; margin: 28px 0 0; max-width: 20ch; text-wrap: pretty;">Начнём с разговора о вашей команде</h2>
+          <h2 class="v2-h2" style="font-size: 44px; font-weight: 400; line-height: 1.08; letter-spacing: -1.4px; margin: 0; max-width: 20ch; text-wrap: pretty;">Начнём с разговора о вашей команде</h2>
           <p style="font-size: 17px; line-height: 1.65; color: rgba(251,250,248,0.68); margin: 28px 0 0; max-width: 52ch; text-wrap: pretty;">На первом созвоне разбираем, как сейчас устроена постановка задач и разработка, где AI уже используется, и что реально измерить. По итогам — понятная картина: какой Harness собирать и с какой команды начинать.</p>
           <div style="margin-top: 40px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(251,250,248,0.8);">
             <div style="padding: 14px 0; border-top: 1px solid rgba(251,250,248,0.2);">Созвон 45 минут, без обязательств</div>
@@ -398,7 +397,6 @@ budgets:
         </div>
         <div style="background: #FBFAF8; color: #0E1116; padding: 40px;">
           <div id="form-success" style="display: none; padding: 40px 0;">
-            <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; color: #1B4DE4;">Статус · принято</div>
             <div style="font-size: 28px; font-weight: 400; letter-spacing: -0.7px; margin-top: 18px;">Заявка отправлена</div>
             <p style="font-size: 16px; line-height: 1.6; color: #3A4149; margin: 14px 0 0;">Свяжемся в течение одного рабочего дня. Если удобнее сразу написать — <a href="mailto:hello@praxor.ru">hello@praxor.ru</a>.</p>
           </div>
@@ -433,7 +431,7 @@ budgets:
                 <input id="f-contact" placeholder="для связи" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #0E1116; border-radius: 0; padding: 8px 0; font-size: 16px; color: #0E1116; outline: none;" />
               </label>
               <label style="display: block;">
-                <span style="display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-bottom: 8px;">Контекст задачи · необязательно</span>
+                <span style="display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-bottom: 8px;">Контекст задачи, необязательно</span>
                 <textarea id="f-note" rows="3" placeholder="Что уже пробовали, что не складывается" style="width: 100%; background: transparent; border: 1px solid #E2DFDA; border-radius: 0; padding: 12px; font-size: 16px; color: #0E1116; outline: none; resize: vertical;"></textarea>
               </label>
             </div>

@@ -281,7 +281,7 @@ def render(p):
     {crumbs_html(p)}
     <h1 class="a-h1">{esc(p["h1"])}</h1>
     <p class="a-lead">{p["lead"]}</p>
-    <div class="a-meta">Праксор · обновлено {ru_date(upd)} · {p["read"]} мин чтения</div>
+    <div class="a-meta">Обновлено {ru_date(upd)}, {p["read"]} мин чтения</div>
     <div class="a-grid">
     {toc(body_of(p))}
     <article class="a-body">
