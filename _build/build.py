@@ -116,6 +116,11 @@ ARTICLE_CSS = """
   .a-body td { border-top: 1px solid #E2DFDA; padding: 12px 16px 12px 0; vertical-align: top; }
   .a-tbl { overflow-x: auto; }
   .a-note { border-left: 3px solid #1B4DE4; padding: 4px 0 4px 20px; margin: 28px 0 0; color: #3A4149; }
+  .a-check { margin: 24px 0 0; border-top: 1px solid #E2DFDA; }
+  .a-check label { display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #E2DFDA; cursor: pointer; font-size: 16px; line-height: 1.55; }
+  .a-check input { width: 18px; height: 18px; margin: 4px 0 0; accent-color: #1B4DE4; cursor: pointer; }
+  .a-check label:has(input:checked) span { color: #5B646E; }
+  .a-check-res { margin: 18px 0 0; padding: 16px 20px; background: #F1EFEB; font-size: 16px; line-height: 1.5; }
   .a-prx { background: #0E1116; color: #FBFAF8; padding: 32px; margin: 48px 0 0; }
   .a-prx h3 { color: #FBFAF8; margin: 0; }
   .a-prx p { color: rgba(251,250,248,0.72); }
@@ -174,6 +179,7 @@ def related(p):
 
 # Каталог материалов на странице-хабе /ai-sdlc/
 CATALOG = [
+    ("Внедрение", ["vnedrenie-ii-v-razrabotku"]),
     ("Подход", ["harness-engineering", "spec-driven-development", "agentic-development",
                 "context-engineering", "multi-agent-development"]),
     ("Практики", ["agents-md", "claude-md", "ai-code-review", "ai-test-generation", "llm-gateway"]),

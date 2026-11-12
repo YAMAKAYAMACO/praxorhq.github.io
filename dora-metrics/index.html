@@ -195,6 +195,11 @@
   .a-body td { border-top: 1px solid #E2DFDA; padding: 12px 16px 12px 0; vertical-align: top; }
   .a-tbl { overflow-x: auto; }
   .a-note { border-left: 3px solid #1B4DE4; padding: 4px 0 4px 20px; margin: 28px 0 0; color: #3A4149; }
+  .a-check { margin: 24px 0 0; border-top: 1px solid #E2DFDA; }
+  .a-check label { display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #E2DFDA; cursor: pointer; font-size: 16px; line-height: 1.55; }
+  .a-check input { width: 18px; height: 18px; margin: 4px 0 0; accent-color: #1B4DE4; cursor: pointer; }
+  .a-check label:has(input:checked) span { color: #5B646E; }
+  .a-check-res { margin: 18px 0 0; padding: 16px 20px; background: #F1EFEB; font-size: 16px; line-height: 1.5; }
   .a-prx { background: #0E1116; color: #FBFAF8; padding: 32px; margin: 48px 0 0; }
   .a-prx h3 { color: #FBFAF8; margin: 0; }
   .a-prx p { color: rgba(251,250,248,0.72); }
@@ -441,6 +446,7 @@
           <p style="font-size: 15px; line-height: 1.6; color: #3A4149; margin: 16px 0 0; max-width: 42ch;">Внедряем AI SDLC в инженерных командах: диагностика, проектирование, внедрение, сопровождение, замер результата.</p>
           <div style="margin-top: 24px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em;">
             <div style="color: #8B939C; text-transform: uppercase; letter-spacing: 0.09em;">Материалы</div>
+            <div><a href="/vnedrenie-ii-v-razrabotku/">Внедрение ИИ в разработку</a></div>
             <div><a href="/ai-sdlc/">AI SDLC</a></div>
             <div><a href="/harness-engineering/">Harness engineering</a></div>
             <div><a href="/spec-driven-development/">Spec-driven development</a></div>
