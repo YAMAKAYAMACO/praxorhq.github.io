@@ -190,6 +190,10 @@
   .a-body code { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.86em; background: #F1EFEB; padding: 1px 5px; }
   .a-body pre { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; line-height: 1.6; background: #0E1116; color: #E6E3DD; padding: 24px; margin: 24px 0 0; overflow-x: auto; }
   .a-body pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
+  .a-copy { display: block; margin: 24px 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #0E1116; background: transparent; border: 1px solid #0E1116; padding: 8px 14px; cursor: pointer; }
+  .a-copy:hover { background: #0E1116; color: #FBFAF8; }
+  .a-copy + pre { margin-top: 8px; }
+  .a-body pre[data-copy] { white-space: pre-wrap; overflow-wrap: anywhere; }
   .a-body table { width: 100%; border-collapse: collapse; margin: 24px 0 0; font-size: 16px; line-height: 1.5; }
   .a-body th { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #8B939C; text-align: left; padding: 0 16px 10px 0; }
   .a-body td { border-top: 1px solid #E2DFDA; padding: 12px 16px 12px 0; vertical-align: top; }
@@ -290,7 +294,7 @@
 <h2 id="content">Что писать в AGENTS.md</h2>
 <p>В файл попадает то, без чего агент ошибётся или потратит время на поиск. Рабочий набор разделов:</p>
 <ul>
-  <li><strong>Команды.</strong> Установка зависимостей, сборка, запуск тестов, линтер, форматирование. С точными флагами, например <code>pnpm test --filter api</code>.</li>
+  <li><strong>Команды.</strong> Установка зависимостей, сборка, запуск тестов, линтер, форматирование. С точными флагами, например <code>pnpm --filter api test</code>.</li>
   <li><strong>Структура репозитория.</strong> Где какой сервис, где общие библиотеки, куда класть новые модули.</li>
   <li><strong>Стиль кода и договорённости.</strong> Только то, что не ловит линтер: как называть сущности, где обрабатывать ошибки, какие паттерны в проекте приняты.</li>
   <li><strong>Тесты.</strong> Какие тесты писать к изменению, как запустить один тест, что считается готовым.</li>
@@ -300,11 +304,12 @@
 </ul>
 
 <h2 id="example">Пример файла</h2>
+<p>Ниже — общий пример. Готовые файлы для TypeScript, React, Python, Go, Java, PHP и монорепозитория собраны на странице <a href="/agents-md-templates/">Шаблоны AGENTS.md</a>.</p>
 <pre><code># AGENTS.md
 
 ## Команды
 - Установка: `pnpm install`
-- Тесты сервиса: `pnpm test --filter billing`
+- Тесты сервиса: `pnpm --filter billing test`
 - Один тест: `pnpm vitest run path/to/file.test.ts -t "название"`
 - Линтер и типы: `pnpm lint &amp;&amp; pnpm typecheck` — обязательно перед сдачей
 

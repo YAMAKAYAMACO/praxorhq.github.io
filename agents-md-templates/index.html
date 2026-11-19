@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Шаблоны AGENTS.md для TypeScript, Python, Go, Java и PHP — Праксор</title>
+<meta name="description" content="Готовые шаблоны AGENTS.md для TypeScript, React, Python, Go, Java и Spring, PHP и Laravel и монорепозитория. С проверенными командами, правилами и границами для AI-агентов." />
+<link rel="canonical" href="https://praxor.ru/agents-md-templates/" />
+<meta property="og:title" content="Шаблоны AGENTS.md для TypeScript, Python, Go, Java и PHP — Праксор" />
+<meta property="og:description" content="Готовые шаблоны AGENTS.md для TypeScript, React, Python, Go, Java и Spring, PHP и Laravel и монорепозитория. С проверенными командами, правилами и границами для AI-агентов." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://praxor.ru/agents-md-templates/" />
+<meta property="og:site_name" content="Праксор" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:image" content="https://praxor.ru/og/agents-md-templates.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://praxor.ru/agents-md-templates/#article",
+   "headline": "Шаблоны AGENTS.md: готовые файлы для семи стеков",
+   "description": "Готовые шаблоны AGENTS.md для TypeScript, React, Python, Go, Java и Spring, PHP и Laravel и монорепозитория. С проверенными командами, правилами и границами для AI-агентов.",
+   "inLanguage": "ru",
+   "datePublished": "2026-11-19",
+   "dateModified": "2026-11-19",
+   "mainEntityOfPage": "https://praxor.ru/agents-md-templates/",
+   "author": {
+    "@id": "https://praxor.ru/#org"
+   },
+   "publisher": {
+    "@id": "https://praxor.ru/#org"
+   },
+   "about": [
+    "AGENTS.md",
+    "Шаблон AGENTS.md",
+    "Пример AGENTS.md",
+    "Правила для AI-агентов"
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Праксор",
+     "item": "https://praxor.ru/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "AI SDLC",
+     "item": "https://praxor.ru/ai-sdlc/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Шаблоны AGENTS.md",
+     "item": "https://praxor.ru/agents-md-templates/"
+    }
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://praxor.ru/#org",
+   "name": "Праксор",
+   "url": "https://praxor.ru/"
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Где взять пример AGENTS.md?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "На этой странице семь готовых шаблонов: TypeScript и Node.js, React, Python, Go, Java и Spring Boot, PHP и Laravel, монорепозиторий. Скопируйте шаблон своего стека, замените команды и правила на свои и проверьте каждую команду."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "На каком языке писать AGENTS.md?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Модели понимают и русский, и английский. Пишите на языке, на котором команда пишет задачи и ревью, чтобы файл было удобно поддерживать. Команды, пути и имена в коде оставляйте как есть."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Нужен ли отдельный AGENTS.md для каждого сервиса?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "В монорепозитории — да, если у сервисов разные стеки или правила. Агент читает ближайший к редактируемому файлу AGENTS.md. В корне остаются общие команды и границы."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Как подключить AGENTS.md к Claude Code?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Claude Code читает CLAUDE.md. Создайте CLAUDE.md со строкой @AGENTS.md: содержимое AGENTS.md подставится в контекст. Ниже можно добавить правила только для Claude Code."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112577477', 'ym');
+
+    ym(112577477, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112577477" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF8; }
+  * { box-sizing: border-box; }
+  body { -webkit-font-smoothing: antialiased; }
+  a { color: #1B4DE4; text-decoration: none; }
+  a:hover { color: #0E1116; }
+  ::selection { background: #1B4DE4; color: #ffffff; }
+  input, textarea, button { font-family: inherit; }
+  .cta-dark:hover { background: #1B4DE4 !important; }
+  .cta-ghost:hover { border-color: #0E1116 !important; }
+  .nav-cta:hover { background: #0E1116 !important; color: #FBFAF8 !important; }
+  .intent-opt { text-align: left; cursor: pointer; width: 100%; display: block; background: transparent; border: none; border-top: 1px solid #E2DFDA; border-left: 3px solid transparent; padding: 16px 0 16px 15px; border-radius: 0; }
+  .intent-opt[aria-pressed="true"] { border-top-color: #0E1116; border-left-color: #1B4DE4; }
+  @media (max-width: 1100px) { .v2-nav-wide { display: none !important; } }
+  @media (min-width: 1101px) { .v2-nav-slim { display: none !important; } }
+  @media (max-width: 1000px) {
+    .v2-pad { padding-left: 20px !important; padding-right: 20px !important; }
+    .v2-sec { padding-top: 72px !important; padding-bottom: 72px !important; }
+    .v2-split { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .v2-4 { grid-template-columns: 1fr 1fr !important; }
+    .v2-3 { grid-template-columns: 1fr 1fr !important; gap: 28px !important; }
+    .v2-h1 { font-size: 40px !important; }
+    .v2-h2 { font-size: 30px !important; }
+    .v2-lead { font-size: 20px !important; }
+    .v2-status { grid-template-columns: 1fr 1fr !important; }
+    .v2-scroll { overflow: auto hidden !important; }
+    .v2-axis { min-width: 660px !important; }
+    .v2-3 p { font-size: 14px !important; }
+  }
+  @media (max-width: 620px) {
+    .v2-3 { grid-template-columns: 1fr !important; }
+    .v2-4 { grid-template-columns: 1fr !important; }
+    .v2-nav-slim { display: none !important; }
+  }
+</style>
+
+<style>
+  .a-wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; border-left: 1px solid #E2DFDA; border-right: 1px solid #E2DFDA; }
+  .a-crumbs { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.06em; color: #8B939C; padding-top: 40px; }
+  .a-crumbs a { color: #5B646E; }
+  .a-crumbs a:hover { color: #1B4DE4; }
+  .a-h1 { font-size: 60px; font-weight: 400; line-height: 1.04; letter-spacing: -2px; margin: 40px 0 0; max-width: 20ch; text-wrap: pretty; }
+  .a-lead { font-size: 22px; font-weight: 300; line-height: 1.5; letter-spacing: -0.3px; color: #3A4149; margin: 32px 0 0; max-width: 62ch; text-wrap: pretty; }
+  .a-meta { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.06em; color: #8B939C; margin-top: 32px; padding-bottom: 56px; }
+  .a-grid { display: grid; grid-template-columns: 3fr 9fr; gap: 56px; border-top: 1px solid #E2DFDA; padding: 56px 0 112px; }
+  .a-toc { position: sticky; top: 92px; align-self: start; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 1.5; letter-spacing: 0.03em; }
+  .a-toc-t { color: #8B939C; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 14px; }
+  .a-toc a { display: block; color: #3A4149; padding: 7px 0; border-top: 1px solid #E2DFDA; }
+  .a-toc a:hover { color: #1B4DE4; }
+  .a-body { font-size: 18px; line-height: 1.7; color: #1F252C; max-width: 70ch; min-width: 0; overflow-wrap: break-word; }
+  .a-body h2 { font-size: 34px; font-weight: 400; line-height: 1.12; letter-spacing: -1px; color: #0E1116; margin: 72px 0 0; scroll-margin-top: 84px; text-wrap: pretty; }
+  .a-body h2:first-child { margin-top: 0; }
+  .a-body h3 { font-size: 22px; font-weight: 500; line-height: 1.3; letter-spacing: -0.4px; color: #0E1116; margin: 40px 0 0; }
+  .a-body p { margin: 18px 0 0; }
+  .a-body ul, .a-body ol { margin: 18px 0 0; padding-left: 22px; }
+  .a-body li { margin: 8px 0 0; }
+  .a-body li::marker { color: #8B939C; }
+  .a-body strong { font-weight: 600; color: #0E1116; }
+  .a-body a { border-bottom: 1px solid rgba(27,77,228,0.3); }
+  .a-body a:hover { border-bottom-color: #0E1116; }
+  .a-body code { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.86em; background: #F1EFEB; padding: 1px 5px; }
+  .a-body pre { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; line-height: 1.6; background: #0E1116; color: #E6E3DD; padding: 24px; margin: 24px 0 0; overflow-x: auto; }
+  .a-body pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
+  .a-copy { display: block; margin: 24px 0 0 auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #0E1116; background: transparent; border: 1px solid #0E1116; padding: 8px 14px; cursor: pointer; }
+  .a-copy:hover { background: #0E1116; color: #FBFAF8; }
+  .a-copy + pre { margin-top: 8px; }
+  .a-body pre[data-copy] { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .a-body table { width: 100%; border-collapse: collapse; margin: 24px 0 0; font-size: 16px; line-height: 1.5; }
+  .a-body th { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #8B939C; text-align: left; padding: 0 16px 10px 0; }
+  .a-body td { border-top: 1px solid #E2DFDA; padding: 12px 16px 12px 0; vertical-align: top; }
+  .a-tbl { overflow-x: auto; }
+  .a-note { border-left: 3px solid #1B4DE4; padding: 4px 0 4px 20px; margin: 28px 0 0; color: #3A4149; }
+  .a-check { margin: 24px 0 0; border-top: 1px solid #E2DFDA; }
+  .a-check label { display: grid; grid-template-columns: 22px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #E2DFDA; cursor: pointer; font-size: 16px; line-height: 1.55; }
+  .a-check input { width: 18px; height: 18px; margin: 4px 0 0; accent-color: #1B4DE4; cursor: pointer; }
+  .a-check label:has(input:checked) span { color: #5B646E; }
+  .a-check-res { margin: 18px 0 0; padding: 16px 20px; background: #F1EFEB; font-size: 16px; line-height: 1.5; }
+  .a-prx { background: #0E1116; color: #FBFAF8; padding: 32px; margin: 48px 0 0; }
+  .a-prx h3 { color: #FBFAF8; margin: 0; }
+  .a-prx p { color: rgba(251,250,248,0.72); }
+  .a-prx a { color: #FBFAF8; border-bottom-color: rgba(251,250,248,0.4); }
+  .a-next { margin-top: 72px; border-top: 1px solid #0E1116; padding-top: 24px; }
+  .a-next-t { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; }
+  .a-next a { display: block; font-size: 21px; letter-spacing: -0.4px; line-height: 1.35; color: #0E1116; padding: 16px 0; border-top: 1px solid #E2DFDA; border-bottom: none; }
+  .a-next a:first-of-type { border-top: none; }
+  .a-next a:hover { color: #1B4DE4; }
+  .a-next span { display: block; font-size: 15px; color: #5B646E; letter-spacing: 0; margin-top: 4px; }
+  .a-faq h3 { margin-top: 28px; }
+  .a-body h2#all + .a-next { margin-top: 28px; }
+  .a-body h2#all ~ .a-next { margin-top: 40px; }
+  @media (max-width: 1000px) {
+    .a-wrap { padding-left: 20px; padding-right: 20px; }
+    .a-h1 { font-size: 38px; letter-spacing: -1.2px; }
+    .a-lead { font-size: 19px; }
+    .a-grid { grid-template-columns: 1fr; gap: 0; padding-top: 40px; }
+    .a-toc { display: none; }
+    .a-body { font-size: 17px; }
+    .a-body h2 { font-size: 27px; margin-top: 56px; }
+    .a-prx { padding: 24px; }
+  }
+  @media (max-width: 620px) {
+    .a-body table, .a-body tbody, .a-body tr, .a-body td { display: block; width: 100%; }
+    .a-body tr:first-child { display: none; }
+    .a-body tr { border-top: 1px solid #E2DFDA; padding: 14px 0; }
+    .a-body td { border: none; padding: 2px 0; }
+    .a-body td:first-child { font-weight: 600; color: #0E1116; }
+  }
+</style>
+</head>
+<body>
+<div style="font-family: 'Geist', -apple-system, system-ui, 'Segoe UI', Helvetica, sans-serif; background: #FBFAF8; color: #0E1116; min-height: 100vh; overflow-x: hidden;">
+
+  <div style="position: sticky; top: 0; z-index: 60; background: rgba(251,250,248,0.88); backdrop-filter: blur(10px); border-bottom: 1px solid #E2DFDA;">
+    <div class="v2-pad" style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; height: 60px; gap: 40px;">
+      <a href="/" style="display: flex; align-items: center; gap: 10px; color: #0E1116;">
+        <span style="width: 14px; height: 14px; border: 1.5px solid #0E1116; display: block; position: relative;">
+          <span style="position: absolute; left: 3px; top: 3px; width: 5px; height: 5px; background: #1B4DE4; display: block;"></span>
+        </span>
+        <span style="font-size: 16px; font-weight: 500; letter-spacing: -0.3px;">Праксор</span>
+      </a>
+      <div class="v2-nav-wide" style="display: flex; align-items: center; gap: 28px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A4149;">
+        <a href="/#harness" style="color: #3A4149;">Harness</a>
+        <a href="/#program" style="color: #3A4149;">Программа</a>
+        <a href="/#cases" style="color: #3A4149;">Кейсы</a>
+        <a href="/#team" style="color: #3A4149;">Команда</a>
+        <a href="/ai-sdlc/" style="color: #3A4149;">Материалы</a>
+      </div>
+      <div class="v2-nav-slim" style="display: flex; align-items: center; gap: 20px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A4149;">
+        <a href="/#program" style="color: #3A4149;">Программа</a>
+        <a href="/ai-sdlc/" style="color: #3A4149;">Материалы</a>
+      </div>
+      <a class="nav-cta" href="#request" style="margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #0E1116; border: 1px solid #0E1116; padding: 9px 16px; white-space: nowrap;">Оставить заявку</a>
+    </div>
+  </div>
+
+  <main>
+  <div class="a-wrap">
+    <nav class="a-crumbs" aria-label="Хлебные крошки"><a href="/">Праксор</a> / <a href="/ai-sdlc/">AI SDLC</a> / <span>Шаблоны AGENTS.md</span></nav>
+    <h1 class="a-h1">Шаблоны AGENTS.md: готовые файлы для семи стеков</h1>
+    <p class="a-lead">Семь шаблонов AGENTS.md, которые можно скопировать в репозиторий и адаптировать за полчаса. В каждом — команды с точными флагами, структура, правила проекта, тесты, границы и требования к сдаче работы. Основные команды для Node.js и Python мы запустили на тестовых проектах, команды для Go, Java и PHP сверили с официальной документацией.</p>
+    <div class="a-meta">Обновлено 19 ноября 2026, 14 мин чтения</div>
+    <div class="a-grid">
+    <nav class="a-toc" aria-label="Содержание">
+      <div class="a-toc-t">Содержание</div>
+      <a href="#how">Как пользоваться шаблонами</a>
+      <a href="#structure">Из чего состоит каждый шаблон</a>
+      <a href="#typescript">TypeScript и Node.js</a>
+      <a href="#react">React-фронтенд</a>
+      <a href="#python">Python</a>
+      <a href="#go">Go</a>
+      <a href="#java">Java и Kotlin, Spring Boot</a>
+      <a href="#php">PHP и Laravel</a>
+      <a href="#monorepo">Монорепозиторий</a>
+      <a href="#check">Как проверить, что шаблон работает</a>
+      <a href="#not">Чего в шаблонах нет специально</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <article class="a-body">
+<h2 id="how">Как пользоваться шаблонами</h2>
+<ol>
+  <li><strong>Возьмите шаблон своего стека</strong> и скопируйте его в корень репозитория как <code>AGENTS.md</code>.</li>
+  <li><strong>Замените команды на свои и запустите каждую.</strong> Неработающая команда в AGENTS.md хуже, чем никакой: агент потратит время на её починку.</li>
+  <li><strong>Удалите правила, которых у вас нет.</strong> Правила в шаблонах — примеры. Оставьте только то, что команда действительно соблюдает.</li>
+  <li><strong>Добавьте правила из реальных ошибок агента.</strong> Самые полезные строки появляются после первой недели работы: агент ошибся, вы разобрали причину и записали правило.</li>
+  <li><strong>Закоммитьте файл</strong> и меняйте его через PR, как код. Для Claude Code создайте рядом <code>CLAUDE.md</code> со строкой <code>@AGENTS.md</code>.</li>
+</ol>
+<p>Что такое AGENTS.md и какие агенты его читают, разобрано в статье <a href="/agents-md/">AGENTS.md: как написать инструкции для AI-агентов</a>.</p>
+
+<h2 id="structure">Из чего состоит каждый шаблон</h2>
+<div class="a-tbl"><table>
+  <tr><th>Раздел</th><th>Зачем он агенту</th></tr>
+  <tr><td>Описание в одну строку</td><td>Стек и назначение сервиса, чтобы агент не выяснял это по файлам</td></tr>
+  <tr><td>Команды</td><td>Как поставить зависимости, запустить один тест, линтер и типы. Агент запускает их десятки раз за задачу</td></tr>
+  <tr><td>Структура</td><td>Куда класть новый код и где лежат знания о системе</td></tr>
+  <tr><td>Правила проекта</td><td>Договорённости, которые не ловит линтер: деньги, даты, ошибки, слои</td></tr>
+  <tr><td>Тесты</td><td>Какие тесты писать к изменению и что с ними нельзя делать</td></tr>
+  <tr><td>Границы</td><td>Что не трогать и когда остановиться и спросить человека</td></tr>
+  <tr><td>Сдача работы</td><td>Какие проверки пройти и что написать в PR</td></tr>
+</table></div>
+<p>Команды стоят первыми. По описанию формата на <a href="https://agents.md/" rel="noopener" target="_blank">agents.md</a>, агент попытается запустить перечисленные проверки и исправить ошибки до завершения задачи. В шаблонах есть отдельная строка «Перед сдачей» с полным набором проверок: она должна совпадать с тем, что проверяет CI.</p>
+<p>Каждый шаблон занимает около 40 строк. Если ваш файл вырос до нескольких сотен строк, вынесите детали в <code>docs/</code> и оставьте в AGENTS.md ссылки. Почему длинный файл работает хуже, разобрано в статье про <a href="/context-engineering/">context engineering</a>.</p>
+
+<h2 id="typescript">TypeScript и Node.js</h2>
+<p>Бэкенд-сервис на Node.js: pnpm, Vitest, ESLint, tsc.</p>
+<pre data-copy><code># AGENTS.md
+
+Сервис биллинга: API на Node.js и TypeScript, PostgreSQL, очередь задач.
+
+## Команды
+- Установка: `pnpm install`
+- Запуск локально: `pnpm dev` (нужен `docker compose up -d db`)
+- Все тесты: `pnpm test`
+- Один файл: `pnpm vitest run src/invoices/invoice.service.test.ts`
+- Один тест по имени: `pnpm vitest run -t "округляет сумму"`
+- Типы: `pnpm tsc --noEmit`
+- Линтер: `pnpm eslint . --fix`
+- Перед сдачей должны пройти: `pnpm tsc --noEmit &amp;&amp; pnpm eslint . &amp;&amp; pnpm test`
+
+## Структура
+- `src/&lt;модуль&gt;/` — модуль целиком: контроллер, сервис, репозиторий, тесты рядом с кодом
+- `src/shared/` — общие утилиты, без бизнес-логики
+- `migrations/` — миграции БД
+- `docs/architecture.md` — карта модулей и внешних интеграций
+- `docs/adr/` — журнал архитектурных решений
+
+## Правила проекта
+- Суммы храним в копейках как `bigint`, `number` для денег не используем.
+- Даты храним в UTC, переводим в часовой пояс клиента только при выводе.
+- Ошибки предметной области — классы из `src/shared/errors.ts`. Голый `throw new Error` не используем.
+- Контроллер не обращается к базе напрямую, только через сервис.
+- Новые зависимости не добавляем без согласования в PR.
+
+## Тесты
+- К изменению поведения — тест на это поведение в том же PR.
+- Внешние HTTP-вызовы мокаем, базу в интеграционных тестах поднимаем через `docker compose`.
+- Тесты не удаляем и не ослабляем, чтобы они прошли. Если тест устарел, объясни это в PR.
+
+## Границы
+- Не трогай `migrations/` без явной просьбы в задаче. Нужна миграция — опиши её в PR и остановись.
+- Не меняй `.env*`, секреты и настройки CI.
+- Если задача требует изменить публичный API, остановись и опиши план.
+
+## Сдача работы
+- Ветка: `feat/&lt;номер задачи&gt;-кратко`
+- В описании PR: ссылка на задачу, что изменено, как проверено, какие команды запускались.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li>Менеджер пакетов и тест-раннер: если у вас npm и Jest, команды будут <code>npm test -- path/to/file.test.ts</code> и <code>npx jest -t "имя"</code>.</li>
+  <li>Правила про деньги, даты и ошибки — пример. Замените их договорённостями вашей команды.</li>
+  <li>Если линтер и типы запускаются скриптами из package.json, укажите скрипты: агент будет вызывать ровно их.</li>
+</ul>
+
+<h2 id="react">React-фронтенд</h2>
+<p>Клиентское приложение: Vite, Vitest, Testing Library, Playwright.</p>
+<pre data-copy><code># AGENTS.md
+
+Веб-клиент личного кабинета: React, TypeScript, Vite.
+
+## Команды
+- Установка: `pnpm install`
+- Запуск: `pnpm dev`
+- Юнит-тесты: `pnpm vitest run`
+- Один файл: `pnpm vitest run src/features/cart/Cart.test.tsx`
+- E2E-тесты: `pnpm exec playwright test`
+- Один E2E-сценарий: `pnpm exec playwright test tests/e2e/checkout.spec.ts`
+- Типы: `pnpm tsc --noEmit`
+- Линтер: `pnpm eslint . --fix`
+- Перед сдачей: `pnpm tsc --noEmit &amp;&amp; pnpm eslint . &amp;&amp; pnpm vitest run`
+
+## Структура
+- `src/features/&lt;фича&gt;/` — компоненты, хуки и тесты одной фичи
+- `src/shared/ui/` — общие компоненты. Новый компонент сюда только если он нужен в двух и более фичах
+- `src/shared/api/` — клиент API, сгенерирован из OpenAPI. Руками не править
+- `tests/e2e/` — сценарии Playwright
+
+## Правила проекта
+- Компоненты функциональные, состояние сервера — через TanStack Query, без ручного `useEffect` для загрузки данных.
+- Стили только через токены из `src/shared/ui/tokens.ts`. Цвета и отступы числами не пишем.
+- Тексты интерфейса — через `t('ключ')`, ключи добавляем в `src/i18n/ru.json`.
+- Каждый интерактивный элемент доступен с клавиатуры и имеет подпись для скринридера.
+
+## Тесты
+- Компоненты тестируем через Testing Library: ищем по роли и тексту, а не по классам.
+- Новый пользовательский сценарий — E2E-тест в `tests/e2e/`.
+- Снэпшоты не обновляем без проверки, что изменение ожидаемое.
+
+## Границы
+- Не трогай `src/shared/api/` — он генерируется командой `pnpm api:generate`.
+- Не меняй настройки сборки в `vite.config.ts` без явной задачи.
+- Не добавляй UI-библиотеки: используем свои компоненты из `src/shared/ui/`.
+
+## Сдача работы
+- Для изменений интерфейса приложи в PR скриншот или короткое видео.
+- В описании PR: ссылка на задачу, что изменено, как проверено.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li>Если E2E-тесты требуют поднятого бэкенда или стенда, напишите, как его поднять, иначе агент будет пытаться запускать их впустую.</li>
+  <li>Пункт про сгенерированный клиент API важен: без него агент правит сгенерированные файлы, и правки пропадают при следующей генерации.</li>
+  <li>Правило про скриншоты в PR помогает ревьюеру: визуальные изменения сложно проверить по диффу.</li>
+</ul>
+
+<h2 id="python">Python</h2>
+<p>Сервис на FastAPI с uv, pytest, ruff и mypy.</p>
+<pre data-copy><code># AGENTS.md
+
+Сервис отчётов: Python 3.12, FastAPI, SQLAlchemy, PostgreSQL. Зависимости через uv.
+
+## Команды
+- Установка: `uv sync`
+- Запуск: `uv run fastapi dev src/reports/main.py`
+- Все тесты: `uv run pytest -q`
+- Один файл: `uv run pytest tests/test_export.py -q`
+- Один тест: `uv run pytest tests/test_export.py::test_totals_by_day -q`
+- Линтер: `uv run ruff check --fix .`
+- Форматирование: `uv run ruff format .`
+- Типы: `uv run mypy src`
+- Перед сдачей: `uv run ruff check . &amp;&amp; uv run ruff format --check . &amp;&amp; uv run mypy src &amp;&amp; uv run pytest -q`
+
+## Структура
+- `src/reports/api/` — роуты FastAPI, только валидация и вызов сервисов
+- `src/reports/services/` — бизнес-логика
+- `src/reports/db/` — модели SQLAlchemy и репозитории
+- `migrations/` — миграции Alembic
+- `tests/` — тесты, структура повторяет `src/`
+
+## Правила проекта
+- Деньги — только `Decimal`, `float` для сумм не используем.
+- Даты в базе в UTC, группировка по дням — в часовом поясе клиента из `client.tz`.
+- Все функции и методы с аннотациями типов, `Any` только с комментарием почему.
+- Роуты не ходят в базу напрямую, только через сервисы.
+- Новая зависимость — через `uv add`, с объяснением в PR.
+
+## Тесты
+- К изменению поведения — тест в том же PR.
+- Фикстуры базы — в `tests/conftest.py`, новые фикстуры кладём туда же.
+- Тесты не удаляем и не помечаем `skip`, чтобы они прошли.
+
+## Границы
+- Миграции создаём только если задача этого требует: `uv run alembic revision --autogenerate -m "кратко"`. Сгенерированную миграцию проверь глазами и опиши в PR.
+- Не меняй `.env*`, секреты и `pyproject.toml` в части настроек линтеров.
+- Не запускай миграции на общих стендах.
+
+## Сдача работы
+- В описании PR: ссылка на задачу, что изменено, как проверено, вывод команд проверки.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li>Если вы используете Poetry или pip, замените <code>uv run</code> на <code>poetry run</code> или прямые вызовы из виртуального окружения.</li>
+  <li>Для Django замените структуру и команды: <code>uv run python manage.py test</code> или <code>uv run pytest</code> с pytest-django, миграции — <code>makemigrations</code>.</li>
+  <li>Команда перед сдачей должна совпадать с тем, что проверяет CI. Иначе агент сдаст работу, которая упадёт в пайплайне.</li>
+</ul>
+
+<h2 id="go">Go</h2>
+<p>Сервис на Go с golangci-lint и интеграционными тестами по build-тегу.</p>
+<pre data-copy><code># AGENTS.md
+
+Сервис платежей: Go, PostgreSQL, gRPC и HTTP API.
+
+## Команды
+- Сборка: `go build ./...`
+- Все тесты: `go test ./...`
+- Тесты пакета: `go test ./internal/payments/...`
+- Один тест без кэша: `go test ./internal/payments/... -run TestRefund -count=1`
+- Проверка гонок: `go test -race ./...`
+- Линтер: `golangci-lint run ./...`
+- Форматирование: `gofmt -w .`
+- Перед сдачей: `go vet ./... &amp;&amp; golangci-lint run ./... &amp;&amp; go test -race ./...`
+
+## Структура
+- `cmd/&lt;сервис&gt;/` — точки входа, без логики
+- `internal/&lt;домен&gt;/` — бизнес-логика, у каждого домена свой пакет
+- `internal/platform/` — база, логирование, конфиг
+- `api/` — protobuf и OpenAPI. Код из них генерируется командой `make generate`
+- `migrations/` — SQL-миграции
+
+## Правила проекта
+- Ошибки оборачиваем с контекстом: `fmt.Errorf("refund %s: %w", id, err)`. Ошибки не глотаем.
+- `context.Context` — первый аргумент у всего, что ходит в сеть или базу.
+- Суммы — целые числа в минимальных единицах валюты, `float64` для денег не используем.
+- Глобальные переменные и `init()` с побочными эффектами не добавляем.
+- Интерфейсы объявляем там, где их используют, а не рядом с реализацией.
+
+## Тесты
+- Табличные тесты для функций с несколькими сценариями.
+- Интеграционные тесты помечены build-тегом `integration` и требуют `docker compose up -d`.
+- Тесты не удаляем и не ослабляем, чтобы они прошли.
+
+## Границы
+- Не правь сгенерированный код в `api/gen/`, меняй исходники и запускай `make generate`.
+- Не трогай `migrations/` без явной задачи.
+- Не меняй публичные gRPC-контракты без согласования: остановись и опиши план в PR.
+
+## Сдача работы
+- В описании PR: ссылка на задачу, что изменено, как проверено.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li>Если генерация кода запускается не через <code>make generate</code>, укажите вашу команду: buf, oapi-codegen или sqlc.</li>
+  <li>Флаг <code>-count=1</code> отключает кэш результатов тестов. Без него агент может увидеть зелёный результат из кэша.</li>
+  <li>Если в проекте нет golangci-lint, оставьте <code>go vet ./...</code> и <code>gofmt -l .</code>.</li>
+</ul>
+
+<h2 id="java">Java и Kotlin, Spring Boot</h2>
+<p>Сервис на Spring Boot: Gradle, JUnit 5, Testcontainers, Flyway.</p>
+<pre data-copy><code># AGENTS.md
+
+Сервис заказов: Java 21, Spring Boot, PostgreSQL, Gradle.
+
+## Команды
+- Сборка с тестами: `./gradlew build`
+- Запуск: `./gradlew bootRun`
+- Все тесты: `./gradlew test`
+- Один класс: `./gradlew test --tests "com.acme.orders.OrderServiceTest"`
+- Один метод: `./gradlew test --tests "com.acme.orders.OrderServiceTest.cancelsUnpaidOrder"`
+- Перед сдачей: `./gradlew build`
+
+Если в проекте Maven: сборка `./mvnw verify`, один класс `./mvnw -Dtest=OrderServiceTest test`.
+
+## Структура
+- `src/main/java/com/acme/orders/&lt;модуль&gt;/` — контроллер, сервис, репозиторий модуля
+- `src/main/resources/db/migration/` — миграции Flyway, файлы `V&lt;номер&gt;__&lt;описание&gt;.sql`
+- `src/test/java/` — тесты, пакеты повторяют `main`
+- `docs/adr/` — журнал решений
+
+## Правила проекта
+- Внедрение зависимостей через конструктор, `@Autowired` на полях не используем.
+- Деньги — `BigDecimal` с явным `RoundingMode`, `double` для сумм не используем.
+- Транзакции объявляем на уровне сервиса, не контроллера.
+- DTO и сущности JPA разделены, сущности наружу из сервиса не отдаём.
+- Новая зависимость в `build.gradle.kts` — только с объяснением в PR.
+
+## Тесты
+- Юнит-тесты на JUnit 5 и Mockito, интеграционные — с Testcontainers.
+- К изменению поведения — тест в том же PR.
+- Тесты не удаляем и не помечаем `@Disabled`, чтобы сборка прошла.
+
+## Границы
+- Применённые миграции Flyway не редактируем. Нужна правка — новая миграция со следующим номером.
+- Не меняй `application-prod.yml` и настройки CI.
+- Изменения публичного REST API — только после согласования: остановись и опиши план в PR.
+
+## Сдача работы
+- В описании PR: ссылка на задачу, что изменено, как проверено.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li>Для Kotlin шаблон тот же: замените пути <code>src/main/java</code> на <code>src/main/kotlin</code> и правила стиля на принятые в команде.</li>
+  <li>Правило про применённые миграции Flyway обязательно: без него агент может «исправить» старую миграцию, и база на стендах перестаёт совпадать с кодом.</li>
+  <li>Если сборка долгая, дайте агенту команду для одного модуля, например <code>./gradlew :orders:test</code>.</li>
+</ul>
+
+<h2 id="php">PHP и Laravel</h2>
+<p>Сервис на Laravel: Pest или PHPUnit, Pint, PHPStan с Larastan.</p>
+<pre data-copy><code># AGENTS.md
+
+Сервис бронирований: PHP 8.3, Laravel, MySQL.
+
+## Команды
+- Установка: `composer install`
+- Запуск: `php artisan serve`
+- Все тесты: `php artisan test`
+- Один класс или тест: `php artisan test --filter=BookingCancellationTest`
+- Параллельно: `php artisan test --parallel`
+- Стиль: `./vendor/bin/pint`
+- Проверка стиля без правок: `./vendor/bin/pint --test`
+- Статический анализ: `./vendor/bin/phpstan analyse`
+- Перед сдачей: `./vendor/bin/pint --test &amp;&amp; ./vendor/bin/phpstan analyse &amp;&amp; php artisan test`
+
+## Структура
+- `app/Http/Controllers/` — тонкие контроллеры, только валидация и вызов сервисов
+- `app/Services/` — бизнес-логика
+- `app/Models/` — модели Eloquent
+- `database/migrations/` — миграции
+- `tests/Feature/` и `tests/Unit/` — тесты
+
+## Правила проекта
+- Валидация входных данных — через Form Request, не в контроллере.
+- Запросы к базе в цикле не пишем, связи загружаем через `with()`.
+- Суммы храним в копейках как целые числа.
+- Тексты для пользователей — через `__('ключ')` и файлы в `lang/`.
+- Новый пакет через `composer require` — только с объяснением в PR.
+
+## Тесты
+- Feature-тест на каждый новый эндпоинт, unit-тест на нетривиальную логику сервиса.
+- Тестовые данные — через фабрики в `database/factories/`.
+- Тесты не удаляем и не ослабляем, чтобы они прошли.
+
+## Границы
+- Миграцию создаём только если задача этого требует: `php artisan make:migration`. Уже применённые миграции не редактируем.
+- Не меняй `.env*` и `config/` для production.
+- Не запускай `php artisan migrate:fresh` и другие команды, которые стирают данные.
+
+## Сдача работы
+- В описании PR: ссылка на задачу, что изменено, как проверено.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li><code>--filter</code> передаётся в PHPUnit или Pest: можно указать класс, метод или часть имени.</li>
+  <li>Если PHPStan падает с нехваткой памяти, добавьте в команду <code>--memory-limit=2G</code>.</li>
+  <li>Запрет на <code>migrate:fresh</code> и похожие команды обязателен: агент может запустить их, чтобы «почистить базу» перед тестами.</li>
+</ul>
+
+<h2 id="monorepo">Монорепозиторий</h2>
+<p>В монорепозитории один файл в корне быстро разрастается. Формат AGENTS.md поддерживает вложенные файлы: агент читает ближайший к редактируемому файлу AGENTS.md, а прямые указания в чате важнее любого файла. В корне — общие команды и границы, в сервисе — его стек и особые правила.</p>
+<p>Корневой файл:</p>
+<pre data-copy><code># AGENTS.md (корень)
+
+Монорепозиторий: сервисы и общие пакеты на TypeScript, pnpm workspaces, Turborepo.
+В каталогах сервисов есть свои AGENTS.md. Работая в сервисе, следуй ближайшему к файлу AGENTS.md.
+
+## Команды
+- Установка: `pnpm install`
+- Тесты одного пакета: `pnpm --filter @acme/billing test`
+- Тесты всего, что затронуто изменением: `pnpm turbo run test --filter=...[origin/main]`
+- Сборка пакета с зависимостями: `pnpm turbo run build --filter=@acme/billing...`
+- Линтер и типы: `pnpm turbo run lint typecheck --filter=...[origin/main]`
+
+## Структура
+- `apps/` — приложения и сервисы, у каждого свой AGENTS.md
+- `packages/` — общие библиотеки
+- `docs/architecture.md` — карта сервисов и контракты между ними
+
+## Общие правила
+- Сервис не импортирует код другого сервиса. Общее выносится в `packages/`.
+- Изменение в `packages/` проверяй тестами всех пакетов, которые от него зависят.
+- Версии зависимостей общие, задаются в корневом `package.json`.
+
+## Границы
+- Не меняй `turbo.json`, `pnpm-workspace.yaml` и CI без явной задачи.
+- Изменения в `packages/contracts/` затрагивают несколько команд: остановись и опиши план в PR.</code></pre>
+<p>Файл сервиса <code>apps/billing/AGENTS.md</code>:</p>
+<pre data-copy><code># AGENTS.md (apps/billing)
+
+Здесь действуют правила из корня и уточнения ниже.
+
+## Команды
+- Тесты: `pnpm --filter @acme/billing test`
+- Один файл: `pnpm --filter @acme/billing exec vitest run src/invoices/invoice.service.test.ts`
+- Локальная база: `docker compose -f apps/billing/docker-compose.yml up -d`
+
+## Правила сервиса
+- Суммы в копейках как `bigint`.
+- Внешний платёжный провайдер вызываем только через `src/providers/`, в тестах — мок из `test/mocks/`.
+
+## Отличия от корня
+- В этом сервисе, в отличие от остальных, миграции лежат в `apps/billing/migrations/` и запускаются отдельно. Без задачи не трогать.</code></pre>
+<p>Что адаптировать:</p>
+<ul>
+  <li>Фильтр <code>--filter=...[origin/main]</code> в Turborepo выбирает пакеты, изменённые относительно ветки main, и пакеты, которые от них зависят. Замените ветку на свою основную.</li>
+  <li>Флаг pnpm <code>--filter</code> ставится перед командой: <code>pnpm --filter @acme/billing test</code>. В варианте <code>pnpm test --filter @acme/billing</code> флаг уйдёт в тест-раннер, и команда упадёт. Мы проверили это на pnpm 10.</li>
+  <li>Если вложенный файл отменяет правило из корня, напишите это явно, как в разделе «Отличия от корня». Иначе агент получит два противоречащих правила.</li>
+</ul>
+
+<h2 id="check">Как проверить, что шаблон работает</h2>
+<p>После того как файл адаптирован, дайте агенту небольшую реальную задачу из бэклога и посмотрите на четыре вещи:</p>
+<ol>
+  <li><strong>Агент запускает ваши команды.</strong> Если он ищет, как запустить тесты, или придумывает свои команды, раздел «Команды» неполный.</li>
+  <li><strong>Новый код лежит там, где положил бы его человек из команды.</strong> Если нет, уточните раздел «Структура».</li>
+  <li><strong>Агент останавливается на границах.</strong> Попросите задачу, которая требует миграции, и проверьте, что агент описал план вместо того, чтобы создать её сам.</li>
+  <li><strong>Перед сдачей проходят все проверки из строки «Перед сдачей».</strong> Если CI падает на том, что агент не запускал, добавьте эту проверку в строку.</li>
+</ol>
+<p>Каждую ручную правку после агента разбирайте: чего ему не хватило. Если это правило, его добавляют в AGENTS.md. Если это можно проверить автоматически, правильнее добавить проверку в линтер или CI: правило в файле агент может пропустить, проверку в CI — нет.</p>
+
+<h2 id="not">Чего в шаблонах нет специально</h2>
+<ul>
+  <li><strong>Правил форматирования.</strong> Их проверяют форматтер и линтер, в AGENTS.md достаточно команды.</li>
+  <li><strong>Общих пожеланий</strong> вроде «пиши чистый код». Они не меняют поведение агента.</li>
+  <li><strong>Истории проекта и описания для людей.</strong> Это место README.</li>
+  <li><strong>Секретов и адресов внутренних систем.</strong> AGENTS.md лежит в репозитории и попадает в контекст внешних моделей.</li>
+</ul>
+
+<div class="a-prx">
+  <h3>Правила для агентов под ваш код</h3>
+  <p>На диагностике наш агент сканирует ваши репозитории, а архитектор разбирает процессы. По итогам собираем AGENTS.md, базу знаний, шаблоны спек и проверки в CI под ваш стек и готовим 1–3 инженеров, которые будут вести их дальше. <a href="/#program">Как проходит программа</a></p>
+</div>
+
+<h2 id="faq">Вопросы</h2>
+<div class="a-faq">
+<h3 data-q>Где взять пример AGENTS.md?</h3>
+<p>На этой странице семь готовых шаблонов: TypeScript и Node.js, React, Python, Go, Java и Spring Boot, PHP и Laravel, монорепозиторий. Скопируйте шаблон своего стека, замените команды и правила на свои и проверьте каждую команду.</p>
+<h3 data-q>На каком языке писать AGENTS.md?</h3>
+<p>Модели понимают и русский, и английский. Пишите на языке, на котором команда пишет задачи и ревью, чтобы файл было удобно поддерживать. Команды, пути и имена в коде оставляйте как есть.</p>
+<h3 data-q>Нужен ли отдельный AGENTS.md для каждого сервиса?</h3>
+<p>В монорепозитории — да, если у сервисов разные стеки или правила. Агент читает ближайший к редактируемому файлу AGENTS.md. В корне остаются общие команды и границы.</p>
+<h3 data-q>Как подключить AGENTS.md к Claude Code?</h3>
+<p>Claude Code читает CLAUDE.md. Создайте CLAUDE.md со строкой @AGENTS.md: содержимое AGENTS.md подставится в контекст. Ниже можно добавить правила только для Claude Code.</p>
+</div>
+
+<script>
+(function () {
+  var blocks = document.querySelectorAll('pre[data-copy]');
+  for (var i = 0; i < blocks.length; i++) (function (pre) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'a-copy';
+    btn.textContent = 'Скопировать';
+    btn.addEventListener('click', function () {
+      var text = pre.querySelector('code').innerText;
+      var done = function () { btn.textContent = 'Скопировано'; setTimeout(function () { btn.textContent = 'Скопировать'; }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
+      else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); }
+    });
+    pre.parentNode.insertBefore(btn, pre);
+  })(blocks[i]);
+})();
+</script>
+
+<div class="a-next"><div class="a-next-t">Читать дальше</div><a href="/agents-md/">AGENTS.md: как написать инструкции для AI-агентов<span>Что такое AGENTS.md, какие агенты его читают, что писать в файле, как работать с монорепозиторием и CLAUDE.md. С шаблоном файла.</span></a><a href="/claude-md/">CLAUDE.md: инструкции для Claude Code в командном репозитории<span>Как Claude Code загружает CLAUDE.md, где хранить личные и командные правила, как подключить AGENTS.md, правила по путям и правила Cursor. С примером файла.</span></a><a href="/context-engineering/">Context engineering: как дать агенту нужный контекст<span>Что такое context engineering, почему длинный контекст ухудшает работу агента, как устроить правила, базу знаний и поиск по коду, чтобы агент видел нужное.</span></a></div>
+    </article>
+    </div>
+  </div>
+  </main>
+
+  <section id="request" style="background: #0E1116; color: #FBFAF8;">
+    <div class="v2-pad v2-sec" style="max-width: 1280px; margin: 0 auto; padding: 128px 40px;">
+      <div class="v2-split" style="display: grid; grid-template-columns: 6fr 6fr; gap: 72px; align-items: start;">
+        <div>
+          <h2 class="v2-h2" style="font-size: 44px; font-weight: 400; line-height: 1.08; letter-spacing: -1.4px; margin: 0; max-width: 20ch; text-wrap: pretty;">Начнём с разговора о вашей команде</h2>
+          <p style="font-size: 17px; line-height: 1.65; color: rgba(251,250,248,0.68); margin: 28px 0 0; max-width: 52ch; text-wrap: pretty;">На первом созвоне разбираем, как сейчас устроена постановка задач и разработка, где AI уже используется, и что можно измерить. После созвона будет понятно, какой Harness собирать и с какой команды начать.</p>
+          <div style="margin-top: 40px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(251,250,248,0.8);">
+            <div style="padding: 14px 0; border-top: 1px solid rgba(251,250,248,0.2);">Созвон 45 минут, без обязательств</div>
+            <div style="padding: 14px 0; border-top: 1px solid rgba(251,250,248,0.2);">Отвечает один из основателей</div>
+            <div style="padding: 14px 0; border-top: 1px solid rgba(251,250,248,0.2); border-bottom: 1px solid rgba(251,250,248,0.2);">Можно под NDA</div>
+          </div>
+        </div>
+        <div style="background: #FBFAF8; color: #0E1116; padding: 40px;">
+          <div id="form-success" style="display: none; padding: 40px 0;">
+            <div style="font-size: 28px; font-weight: 400; letter-spacing: -0.7px; margin-top: 18px;">Заявка отправлена</div>
+            <p style="font-size: 16px; line-height: 1.6; color: #3A4149; margin: 14px 0 0;">Свяжемся в течение одного рабочего дня. Если удобнее сразу написать — <a href="mailto:hello@praxor.ru">hello@praxor.ru</a>.</p>
+          </div>
+          <div id="form-body">
+            <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C;">Оставить заявку</div>
+            <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-top: 32px;">Что вам нужно</div>
+            <div style="margin-top: 12px;">
+              <button type="button" class="intent-opt" data-intent="Диагностика" aria-pressed="true">
+                <span style="display: block; font-size: 16px; font-weight: 500; letter-spacing: -0.2px;">Диагностика</span>
+                <span style="display: block; font-size: 14px; line-height: 1.45; color: #5B646E; margin-top: 4px;">2 недели: архитектура, процессы, стартовые метрики</span>
+              </button>
+              <button type="button" class="intent-opt" data-intent="Воркшоп" aria-pressed="false">
+                <span style="display: block; font-size: 16px; font-weight: 500; letter-spacing: -0.2px;">Воркшоп с командой</span>
+                <span style="display: block; font-size: 14px; line-height: 1.45; color: #5B646E; margin-top: 4px;">Запуск на реальных задачах из вашего бэклога</span>
+              </button>
+              <button type="button" class="intent-opt" data-intent="Консультация" aria-pressed="false">
+                <span style="display: block; font-size: 16px; font-weight: 500; letter-spacing: -0.2px;">Консультация</span>
+                <span style="display: block; font-size: 14px; line-height: 1.45; color: #5B646E; margin-top: 4px;">Разобрать ситуацию и понять, с чего начинать</span>
+              </button>
+            </div>
+            <div style="display: grid; gap: 18px; margin-top: 32px;">
+              <label style="display: block;">
+                <span style="display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-bottom: 8px;">Имя</span>
+                <input id="f-name" placeholder="Как к вам обращаться" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #0E1116; border-radius: 0; padding: 8px 0; font-size: 16px; color: #0E1116; outline: none;" />
+              </label>
+              <label style="display: block;">
+                <span style="display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-bottom: 8px;">Компания и ваша роль</span>
+                <input id="f-company" placeholder="Например: финтех, 120 разработчиков, CTO" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #0E1116; border-radius: 0; padding: 8px 0; font-size: 16px; color: #0E1116; outline: none;" />
+              </label>
+              <label style="display: block;">
+                <span style="display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-bottom: 8px;">Email или Telegram</span>
+                <input id="f-contact" placeholder="для связи" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #0E1116; border-radius: 0; padding: 8px 0; font-size: 16px; color: #0E1116; outline: none;" />
+              </label>
+              <label style="display: block;">
+                <span style="display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C; margin-bottom: 8px;">Контекст задачи, необязательно</span>
+                <textarea id="f-note" rows="3" placeholder="Что уже пробовали, что не складывается" style="width: 100%; background: transparent; border: 1px solid #E2DFDA; border-radius: 0; padding: 12px; font-size: 16px; color: #0E1116; outline: none; resize: vertical;"></textarea>
+              </label>
+            </div>
+            <div id="f-error" style="display: none; margin-top: 24px; border-left: 3px solid #B45309; padding: 12px 0 12px 15px; font-size: 14px; line-height: 1.5; color: #0E1116;"></div>
+            <button id="f-submit" type="button" class="cta-dark" style="width: 100%; margin-top: 32px; background: #0E1116; color: #FBFAF8; border: none; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 17px 24px; cursor: pointer;">Отправить заявку</button>
+            <div style="font-size: 13px; line-height: 1.5; color: #5B646E; margin-top: 14px;">Отправляя форму, вы соглашаетесь на обработку контактных данных для связи по вашему запросу.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="v2-pad" style="max-width: 1280px; margin: 0 auto; padding: 0 40px; border-left: 1px solid #E2DFDA; border-right: 1px solid #E2DFDA;">
+    <div style="padding: 56px 0 28px;">
+      <div class="v2-split" style="display: grid; grid-template-columns: 5fr 3fr 4fr; gap: 40px; align-items: start;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="width: 14px; height: 14px; border: 1.5px solid #0E1116; display: block;"></span>
+            <span style="font-size: 16px; font-weight: 500; letter-spacing: -0.3px;">Праксор</span>
+          </div>
+          <p style="font-size: 15px; line-height: 1.6; color: #3A4149; margin: 16px 0 0; max-width: 42ch;">Внедряем AI SDLC в инженерных командах: диагностика, проектирование, внедрение, сопровождение, замер результата.</p>
+          <div style="margin-top: 24px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em;">
+            <div style="color: #8B939C; text-transform: uppercase; letter-spacing: 0.09em;">Материалы</div>
+            <div><a href="/vnedrenie-ii-v-razrabotku/">Внедрение ИИ в разработку</a></div>
+            <div><a href="/ai-sdlc/">AI SDLC</a></div>
+            <div><a href="/harness-engineering/">Harness engineering</a></div>
+            <div><a href="/spec-driven-development/">Spec-driven development</a></div>
+            <div><a href="/agents-md/">AGENTS.md</a></div>
+            <div><a href="/dora-metrics/">DORA-метрики</a></div>
+            <div><a href="/ai-sdlc/#all">Все материалы</a></div>
+          </div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em;">
+          <div style="color: #8B939C; text-transform: uppercase; letter-spacing: 0.09em;">Связаться</div>
+          <div><a href="mailto:hello@praxor.ru">hello@praxor.ru</a></div>
+          <div><a href="#request">Оставить заявку</a></div>
+        </div>
+        <div style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; line-height: 2; letter-spacing: 0.04em; color: #3A4149;">
+          <div style="color: #8B939C; text-transform: uppercase; letter-spacing: 0.09em;">Реквизиты</div>
+          <div>ИП Уразбаев Асхат Орынбасарович</div>
+          <div>ИНН 502506471139</div>
+          <div>ОГРНИП 321774600743669</div>
+        </div>
+      </div>
+      <div style="margin-top: 44px; padding-top: 20px; border-top: 1px solid #E2DFDA; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8B939C;">© 2026 Праксор</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var WEBHOOK = 'https://hook.eu1.make.com/vnnuiexjx76j3f51vrftbgwtefeoscce';
+  var UTM_KEY = 'praxor_utm';
+  var UTM_FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+  var LANDING_VERSION = 'praxxor_v1_article';
+
+  try {
+    var q = new URLSearchParams(location.search), fromUrl = {}, any = false;
+    UTM_FIELDS.forEach(function (f) { var v = q.get(f); if (v) { fromUrl[f] = v; any = true; } });
+    if (any && !localStorage.getItem(UTM_KEY)) localStorage.setItem(UTM_KEY, JSON.stringify(fromUrl));
+  } catch (e) {}
+
+  function utm() {
+    var stored = {};
+    try { stored = JSON.parse(localStorage.getItem(UTM_KEY) || '{}') || {}; } catch (e) {}
+    var out = {};
+    UTM_FIELDS.forEach(function (f) { out[f] = stored[f] || ''; });
+    return out;
+  }
+
+  var intent = 'Диагностика';
+  var opts = [].slice.call(document.querySelectorAll('.intent-opt'));
+  opts.forEach(function (b) {
+    b.addEventListener('click', function () {
+      intent = b.getAttribute('data-intent');
+      opts.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+    });
+  });
+
+  var btn = document.getElementById('f-submit');
+  var errBox = document.getElementById('f-error');
+  var sending = false;
+
+  function showError(msg) {
+    errBox.textContent = msg;
+    errBox.style.display = 'block';
+  }
+
+  btn.addEventListener('click', async function () {
+    if (sending) return;
+    var name = document.getElementById('f-name').value.trim();
+    var company = document.getElementById('f-company').value.trim();
+    var contact = document.getElementById('f-contact').value.trim();
+    var note = document.getElementById('f-note').value.trim();
+    if (!name || !contact) { showError('Заполните имя и контакт для связи.'); return; }
+
+    sending = true;
+    btn.textContent = 'Отправляем…';
+    errBox.style.display = 'none';
+
+    var payload = Object.assign({
+      name: name,
+      company_role: company,
+      contact: contact,
+      request_type: intent,
+      message: note,
+      page_url: location.href,
+      landing_version: LANDING_VERSION
+    }, utm());
+    var body = JSON.stringify(payload);
+    var headers = { 'Content-Type': 'text/plain;charset=UTF-8' };
+
+    function done() {
+      try { ym(112577477, 'reachGoal', 'lead', { request_type: intent }); } catch (e) {}
+      document.getElementById('form-body').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+    function fail() {
+      sending = false;
+      btn.textContent = 'Отправить заявку';
+      showError('Не удалось отправить заявку. Попробуйте ещё раз или напишите на hello@praxor.ru.');
+    }
+
+    try {
+      var res = await fetch(WEBHOOK, { method: 'POST', headers: headers, body: body });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      done();
+    } catch (e) {
+      try {
+        await fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', headers: headers, body: body });
+        done();
+      } catch (e2) {
+        var queued = false;
+        try { queued = !!(navigator.sendBeacon && navigator.sendBeacon(WEBHOOK, new Blob([body], { type: 'text/plain;charset=UTF-8' }))); } catch (e3) {}
+        queued ? done() : fail();
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
