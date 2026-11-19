@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru">
+  <title>Праксор — материалы об AI SDLC</title>
+  <subtitle>Практические руководства по внедрению AI-агентов в разработку</subtitle>
+  <link href="https://praxor.ru/feed.xml" rel="self" />
+  <link href="https://praxor.ru/ai-sdlc/" />
+  <id>https://praxor.ru/feed.xml</id>
+  <updated>2026-11-19T00:00:00Z</updated>
+  <author><name>Праксор</name><email>hello@praxor.ru</email></author>
+  <entry>
+    <title>Шаблоны AGENTS.md: готовые файлы для семи стеков</title>
+    <link href="https://praxor.ru/agents-md-templates/" />
+    <id>https://praxor.ru/agents-md-templates/</id>
+    <published>2026-11-19T00:00:00Z</published>
+    <updated>2026-11-19T00:00:00Z</updated>
+    <summary>Готовые шаблоны AGENTS.md для TypeScript, React, Python, Go, Java и Spring, PHP и Laravel и монорепозитория. С проверенными командами, правилами и границами для AI-агентов.</summary>
+  </entry>
+  <entry>
+    <title>Как внедрить ИИ в разработку: план на 3 месяца</title>
+    <link href="https://praxor.ru/vnedrenie-ii-v-razrabotku/" />
+    <id>https://praxor.ru/vnedrenie-ii-v-razrabotku/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>План внедрения ИИ-агентов в разработку ПО на пилотной команде: что говорят исследования, чек-лист готовности, этапы по неделям, роли, политика использования AI, замер эффекта и причины, по которым пилоты проваливаются.</summary>
+  </entry>
+  <entry>
+    <title>Spec-driven development: разработка по спецификации с AI-агентами</title>
+    <link href="https://praxor.ru/spec-driven-development/" />
+    <id>https://praxor.ru/spec-driven-development/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Как работает spec-driven development, что писать в спецификации для агента, чем отличаются GitHub Spec Kit и Kiro и как совместить спеки с Jira.</summary>
+  </entry>
+  <entry>
+    <title>Мультиагентная разработка: когда нужна цепочка агентов</title>
+    <link href="https://praxor.ru/multi-agent-development/" />
+    <id>https://praxor.ru/multi-agent-development/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Как устроена оркестрация AI-агентов в разработке: планировщик, исполнитель, ревьюер, контрольные точки. Когда несколько агентов лучше одного и где они ломаются.</summary>
+  </entry>
+  <entry>
+    <title>LLM-шлюз и on-premise модели: закрытый контур для AI-агентов</title>
+    <link href="https://praxor.ru/llm-gateway/" />
+    <id>https://praxor.ru/llm-gateway/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Зачем компании LLM-шлюз (AI gateway), что он делает, как подключить к нему Claude Code и другие агенты и когда нужна локальная on-premise модель.</summary>
+  </entry>
+  <entry>
+    <title>Harness engineering: как собрать среду, в которой агенты пишут код</title>
+    <link href="https://praxor.ru/harness-engineering/" />
+    <id>https://praxor.ru/harness-engineering/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Что такое harness engineering, из каких слоёв состоит harness для AI-агентов, чем он отличается от context engineering и с чего начать в своей команде.</summary>
+  </entry>
+  <entry>
+    <title>DORA-метрики: как измерить скорость и стабильность релизов</title>
+    <link href="https://praxor.ru/dora-metrics/" />
+    <id>https://praxor.ru/dora-metrics/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Пять DORA-метрик: lead time, частота релизов, доля неудачных изменений, время восстановления и rework rate. Как их считать по Git и CI, какие ошибки допускают при замере.</summary>
+  </entry>
+  <entry>
+    <title>Context engineering: как дать агенту нужный контекст</title>
+    <link href="https://praxor.ru/context-engineering/" />
+    <id>https://praxor.ru/context-engineering/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Что такое context engineering, почему длинный контекст ухудшает работу агента, как устроить правила, базу знаний и поиск по коду, чтобы агент видел нужное.</summary>
+  </entry>
+  <entry>
+    <title>CLAUDE.md: инструкции для Claude Code в командном репозитории</title>
+    <link href="https://praxor.ru/claude-md/" />
+    <id>https://praxor.ru/claude-md/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Как Claude Code загружает CLAUDE.md, где хранить личные и командные правила, как подключить AGENTS.md, правила по путям и правила Cursor. С примером файла.</summary>
+  </entry>
+  <entry>
+    <title>Генерация тестов с ИИ: как получить тесты, которые ловят ошибки</title>
+    <link href="https://praxor.ru/ai-test-generation/" />
+    <id>https://praxor.ru/ai-test-generation/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Как генерировать тесты с помощью ИИ: тесты от спеки, фильтр сгенерированных тестов, мутационное тестирование, защита от ослабления тестов агентом. Опыт Meta и практики.</summary>
+  </entry>
+  <entry>
+    <title>AI SDLC: как встроить AI-агентов в весь цикл разработки</title>
+    <link href="https://praxor.ru/ai-sdlc/" />
+    <id>https://praxor.ru/ai-sdlc/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Что такое AI SDLC, четыре уровня зрелости команды, из чего состоит процесс с агентами и как измерить эффект через DORA-метрики. Материалы Праксора.</summary>
+  </entry>
+  <entry>
+    <title>Как измерить эффект AI в разработке</title>
+    <link href="https://praxor.ru/ai-impact-metrics/" />
+    <id>https://praxor.ru/ai-impact-metrics/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Почему число строк и PR не показывает эффект AI, как измерять производительность разработчиков по DORA, SPACE и DevEx, какие AI-метрики добавить и как устроить замер пилота.</summary>
+  </entry>
+  <entry>
+    <title>AI code review: ревью кода агентами в процессе команды</title>
+    <link href="https://praxor.ru/ai-code-review/" />
+    <id>https://praxor.ru/ai-code-review/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Как устроить AI code review: что проверяет агент, что остаётся человеку, как писать правила ревью, почему писать и ревьюить должны разные модели, как мерить эффект.</summary>
+  </entry>
+  <entry>
+    <title>AGENTS.md: как написать инструкции для AI-агентов</title>
+    <link href="https://praxor.ru/agents-md/" />
+    <id>https://praxor.ru/agents-md/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Что такое AGENTS.md, какие агенты его читают, что писать в файле, как работать с монорепозиторием и CLAUDE.md. С шаблоном файла.</summary>
+  </entry>
+  <entry>
+    <title>Агентная разработка: как команда работает с AI-агентами</title>
+    <link href="https://praxor.ru/agentic-development/" />
+    <id>https://praxor.ru/agentic-development/</id>
+    <published>2026-11-12T00:00:00Z</published>
+    <updated>2026-11-12T00:00:00Z</updated>
+    <summary>Что такое агентная разработка и agentic coding, чем агент отличается от автодополнения, как ставить ему задачи и принимать результат, где команды застревают.</summary>
+  </entry>
+</feed>

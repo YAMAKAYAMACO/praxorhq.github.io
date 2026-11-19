@@ -1,0 +1,4 @@
+# GitHub Pages по умолчанию не публикует каталоги, которые начинаются с точки.
+# .well-known нужен для security.txt.
+include:
+  - .well-known

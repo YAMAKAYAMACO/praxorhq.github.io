@@ -111,6 +111,10 @@ ARTICLE_CSS = """
   .a-body code { MONO font-size: 0.86em; background: #F1EFEB; padding: 1px 5px; }
   .a-body pre { MONO font-size: 14px; line-height: 1.6; background: #0E1116; color: #E6E3DD; padding: 24px; margin: 24px 0 0; overflow-x: auto; }
   .a-body pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
+  .a-copy { display: block; margin: 24px 0 0 auto; MONO font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #0E1116; background: transparent; border: 1px solid #0E1116; padding: 8px 14px; cursor: pointer; }
+  .a-copy:hover { background: #0E1116; color: #FBFAF8; }
+  .a-copy + pre { margin-top: 8px; }
+  .a-body pre[data-copy] { white-space: pre-wrap; overflow-wrap: anywhere; }
   .a-body table { width: 100%; border-collapse: collapse; margin: 24px 0 0; font-size: 16px; line-height: 1.5; }
   .a-body th { MONO font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #8B939C; text-align: left; padding: 0 16px 10px 0; }
   .a-body td { border-top: 1px solid #E2DFDA; padding: 12px 16px 12px 0; vertical-align: top; }
@@ -182,7 +186,7 @@ CATALOG = [
     ("Внедрение", ["vnedrenie-ii-v-razrabotku"]),
     ("Подход", ["harness-engineering", "spec-driven-development", "agentic-development",
                 "context-engineering", "multi-agent-development"]),
-    ("Практики", ["agents-md", "claude-md", "ai-code-review", "ai-test-generation", "llm-gateway"]),
+    ("Практики", ["agents-md", "agents-md-templates", "claude-md", "ai-code-review", "ai-test-generation", "llm-gateway"]),
     ("Метрики", ["dora-metrics", "ai-impact-metrics"]),
 ]
 
@@ -267,6 +271,8 @@ def render(p):
 <meta property="og:url" content="{url}" />
 <meta property="og:site_name" content="Праксор" />
 <meta property="og:locale" content="ru_RU" />
+<meta property="article:published_time" content="{p["published"]}" />
+<meta property="article:modified_time" content="{upd}" />
 <meta property="og:image" content="{SITE}/og/{p['slug']}.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -350,6 +356,60 @@ def render_404():
 
 (ROOT / "404.html").write_text(render_404().replace('href="#request"', 'href="/#request"'), encoding="utf-8")
 print("собрал 404.html")
+
+
+# llms.txt: карта сайта для языковых моделей (формат llmstxt.org)
+def strip_tags(s):
+    return re.sub(r"<[^>]+>", "", s)
+
+llms = [
+    "# Праксор",
+    "",
+    "> Праксор выстраивает AI SDLC в инженерных командах: за 3 месяца внедряет AI-агентов в процесс разработки на пилотной команде и измеряет эффект DORA-метриками и AI-метриками против стартового замера.",
+    "",
+    "Сайт на русском языке. Основатели: Асхат Уразбаев, Кирилл Мокевнин, Алексей Могильников, Сергей Липчанский. Связаться: hello@praxor.ru.",
+    "",
+    "## Компания",
+    "",
+    f"- [Праксор]({SITE}/): программа пилота из пяти шагов, уровни зрелости AI SDLC, слои harness, кейсы, команда",
+    f"- [AI SDLC]({SITE}/ai-sdlc/): {by_slug['ai-sdlc']['description']}",
+]
+for title, slugs in CATALOG:
+    llms += ["", f"## {title}", ""]
+    for s in slugs:
+        q = by_slug[s]
+        llms.append(f"- [{strip_tags(q['h1'])}]({SITE}/{s}/): {q['description']}")
+(ROOT / "llms.txt").write_text("\n".join(llms) + "\n", encoding="utf-8")
+print("llms.txt:", sum(1 for l in llms if l.startswith("- [")), "ссылок")
+
+# Atom-лента материалов
+def xesc(s):
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+feed_pages = sorted(pages, key=lambda q: (q.get("modified", q["published"]), q["slug"]), reverse=True)
+feed_upd = feed_pages[0].get("modified", feed_pages[0]["published"])
+feed = ['<?xml version="1.0" encoding="utf-8"?>',
+        '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru">',
+        '  <title>Праксор — материалы об AI SDLC</title>',
+        '  <subtitle>Практические руководства по внедрению AI-агентов в разработку</subtitle>',
+        f'  <link href="{SITE}/feed.xml" rel="self" />',
+        f'  <link href="{SITE}/ai-sdlc/" />',
+        f'  <id>{SITE}/feed.xml</id>',
+        f'  <updated>{feed_upd}T00:00:00Z</updated>',
+        '  <author><name>Праксор</name><email>hello@praxor.ru</email></author>']
+for q in feed_pages:
+    url = f"{SITE}/{q['slug']}/"
+    feed += ['  <entry>',
+             f'    <title>{xesc(strip_tags(q["h1"]))}</title>',
+             f'    <link href="{url}" />',
+             f'    <id>{url}</id>',
+             f'    <published>{q["published"]}T00:00:00Z</published>',
+             f'    <updated>{q.get("modified", q["published"])}T00:00:00Z</updated>',
+             f'    <summary>{xesc(q["description"])}</summary>',
+             '  </entry>']
+feed.append('</feed>')
+(ROOT / "feed.xml").write_text("\n".join(feed) + "\n", encoding="utf-8")
+print("feed.xml:", len(feed_pages), "записей")
 
 # sitemap: главная + все статьи
 urls = [(f"{SITE}/", "2026-11-12")] + [(f"{SITE}/{p['slug']}/", p.get("modified", p["published"])) for p in pages]
